@@ -3,7 +3,7 @@ import React from "react"
 function Add(props){
   return(
     <div>
-      <button onClick={()=>props.onChange()}>Add</button>
+      <button onClick={()=>props.onChange()}>+</button>
     </div>)
 }
 

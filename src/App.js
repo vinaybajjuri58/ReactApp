@@ -1,6 +1,7 @@
 import React from "react"
 import Add from "./Add"
 import Sub from "./Sub"
+import Refresh from "./Refresh"
 // import randomcolor from "randomcolor"
 // import styles from "./styles.css"
 
@@ -14,6 +15,7 @@ class App extends React.Component{
     }
     this.Add = this.Add.bind(this)
     this.Sub = this.Sub.bind(this)
+    this.Refresh =this.Refresh.bind(this)
   }
   Sub(){
     this.setState(prevState =>{
@@ -34,6 +36,11 @@ class App extends React.Component{
       }
     )
   }
+  Refresh(){
+    this.setState({
+          cnt:0
+      })
+  }
   render(){
     return(
     <div >
@@ -45,6 +52,7 @@ class App extends React.Component{
   {this.state.cnt}</h1>
       <Add onChange={this.Add}/>
       <Sub onChange={this.Sub}/>
+      <Refresh onChange={this.Refresh}/>
     </div>
     )
   }
